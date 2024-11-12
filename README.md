@@ -25,3 +25,15 @@ Jawaban:
    - Mengubah `StatefulWidget` menjadi `StatelessWidget`.
    - Mendefinisikan `class` yang akan digunakan seperti `InfoCard`, `ItemHomePage`, `ItemCard`.
    - Mengisi setiap class dengan constructor dan logika pemrograman.
+
+# Tugas 8
+Jawaban:
+1. Kegunaan `const` dalam Flutter adalah untuk mendefinisikan sebuah variabel yang nilainya tidak akan pernah berubah selama program berjalan, sehingga mampu meningkatkan efisiensi memori, dan memastikan tidak terjadi perubahan yang tidak diinginkan pada variabel tersebut.
+
+2. <i>Column</i> dalam Flutter adalah <i>widget</i> yang akan menampilkan `children` secara vertikal, sedangkan <i>Row</i> dalam Flutter adalah <i>widget</i> yang akan menampilkan `children` secara horizontal.
+
+3. Saya menggunakan `TextFormField` untuk setiap input yang dibutuhkan: `name`, `price`, `description`, `rarity`, dan `amount`. Selain itu juga terdapat `ElevatedButton` yang berfungsi sebagai tombol yang dapat ditekan. Juga terdapat `AlertDialog` yang berfungsi untuk menampilkan pesan `Kamu telah menekan tombol ${item.name}`. Terdapat banyak elemen input lain yang belum saya gunakan, misalnya `CheckBox` yang akan menerima input `True/False` untuk setiap string yang diberikan, atau `Slider` yang dapat digunakan untuk memberikan input dengan menggeser bulatan ke kiri atau kanan.
+
+4. Dengan menggunakan `ThemeData` dan `ColorScheme` yang akan mendefinisikan tema utama dari aplikasi sehingga tampilan-tampilan lain dapat langsung menggunakan tema yang telah dibuat pada `main.dart` tersebut.
+
+5. Dengan menggunakan <i>method-method</i> yang disediakan oleh `Navigator`, seperti `push()` dan `pop()`, yang digunakan untuk melakukan navigasi antar setiap tampilan ketika tombol ditekan atau perlu perubahan tampilan.

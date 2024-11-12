@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:fantasia_commercia/menu.dart';
+import 'package:fantasia_commercia/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
