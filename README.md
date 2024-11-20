@@ -37,3 +37,39 @@ Jawaban:
 4. Dengan menggunakan `ThemeData` dan `ColorScheme` yang akan mendefinisikan tema utama dari aplikasi sehingga tampilan-tampilan lain dapat langsung menggunakan tema yang telah dibuat pada `main.dart` tersebut.
 
 5. Dengan menggunakan <i>method-method</i> yang disediakan oleh `Navigator`, seperti `push()` dan `pop()`, yang digunakan untuk melakukan navigasi antar setiap tampilan ketika tombol ditekan atau perlu perubahan tampilan.
+
+# Tugas 9
+Jawaban:
+1. Model membantu mempermudah pengelolaan data JSON agar terstruktur sesuai dengan kebutuhan aplikasi. Tanpa model, proses parsing atau penggunaan data menjadi lebih rumit, tetapi tidak akan menyebabkan error jika data ditangani dengan benar.
+
+2. Library `http` digunakan untuk melakukan komunikasi HTTP, seperti mengirim permintaan (GET, POST) dan menerima respons dari server dalam bentuk JSON atau data lainnya.
+
+3. `CookieRequest` digunakan untuk menyimpan status sesi dan <i>cookie</i> autentikasi. Dengan membagikan instance-nya ke seluruh komponen aplikasi, semua komponen dapat berbagi informasi sesi yang sama tanpa perlu login ulang.
+
+4. Mekanisme pengiriman data dari input hingga tampil di Flutter:
+   - Input: Pengguna memasukkan data melalui form di Flutter.
+   - Pengiriman: Data dikirim ke server melalui permintaan HTTP POST menggunakan `http` atau `CookieRequest`.
+   - Pemrosesan Server: Server Django memproses data, menyimpannya di basis data, dan mengembalikan respons.
+   - Penampilan: Data dari respons server ditampilkan di Flutter setelah parsing atau konversi ke model.
+
+5. Mekanisme autentikasi (login, register, logout):
+   - Login/Register: Data akun dikirim melalui POST ke endpoint Django. Server memvalidasi data dan, jika berhasil, mengembalikan respons dengan status dan cookie sesi.
+   - Autentikasi Django: Server Django memeriksa kredensial dan membuat token atau cookie untuk sesi yang valid.
+   - Logout: Permintaan dikirim ke endpoint logout, Django menghapus sesi, dan Flutter menghapus token dari instance CookieRequest.
+
+6. Step-by-step:
+   - Menambahkan `corsheaders` pada `requirements.txt`, melakukan instalasi dan menambahkan pada `settings.py`.
+   - Menambahkan <i>routing</i> untuk <i>emulator android</i>.
+   - Membuat app `authentication` pada proyek Django yang telah dibuat.
+   - membuat fungsi `login` dan `logout` yang akan diintegrasi dengan Flutter.
+   - Membuat `urls.py` yang menyimpan <i>routing</i> untuk setiap fungsi `authentication`.
+   - Melakukan instalasi `package` yang membantu integrasi.
+   - Membagikan <i>instance</i> `CookieRequest` ke semua komponen aplikasi.
+   - Membuat halaman `login` dan `register` pada aplikasi.
+   - Membuat model kustom berdasarkan data JSON pada proyek Django.
+   - Menambahkan dependensi HTTP.
+   - Mengambil data dari proyek Django melalui <i>link address</i> dari fungsi yang akan digunakan.
+   - Menghubungkan `authentication` dan `form` Flutter kepada layanan Django.
+   - Membuat berkas `item_detail.dart` yang akan menampilkan spesifikasi lengkap dari sebuah <i>item</i> yang diklik.
+   - Mengubah bentuk `teks` pada daftar <i>item</i> menjadi `button`.
+   - Menghubungkan `button` dengan halaman hasil `item_detail.dart`.
